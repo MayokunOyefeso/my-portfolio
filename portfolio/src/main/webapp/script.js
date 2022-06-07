@@ -13,16 +13,23 @@
 // limitations under the License.
 
 /**
- * Adds a random greeting to the page.
+ * Adds a random word to live by to the page.
  */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+function addWordsToLiveBy() {
+  const wordsToLiveBy =
+      ['Each one, teach one!', 'Shoot for the moon. Even if you miss, you will land among the stars!',
+       'When you want to succeed as bad as you want to breathe, then you will be successful.',
+     'Ensure your grind is congruent to your dreams.', 'Do not make a habit of choosing what feels good over what is actually good for you.',
+     'Be phenomenal or be forgotten.', 'Do not aspire to make a living, aspire to make a difference.', 'Hard work WORKS!',
+     'The secret to getting ahead is getting started.', 'Your level of success is determined by the level of your discipline and perseverance.',
+     'With discipline, you are likely to get it done.', 'Will it be easy? NOPE! Worth it? ABSOLUTELY!',
+     'A new day, A new opportunity to be world class!', 'Never compromise on who you are.',
+     'Winners are not people who never fail but people who never quit!', 'You are born with a capacity to achieve greatness.'];
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+  // Pick a random phrase from wordsToLiveBy .
+  const word = wordsToLiveBy[Math.floor(Math.random() * wordsToLiveBy.length)];
 
   // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+  const wordContainer = document.getElementById('word-container');
+  wordContainer.innerText = word;
 }
