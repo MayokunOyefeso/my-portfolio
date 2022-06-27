@@ -28,7 +28,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.safety.Whitelist;
 
 /** Servlet responsible for creating new tasks. */
-@WebServlet("/new-task")
+@WebServlet("/new-form-handler")
 public class NewTaskServlet extends HttpServlet {
 
   @Override
@@ -36,16 +36,17 @@ public class NewTaskServlet extends HttpServlet {
     // Sanitize user input to remove HTML tags and JavaScript.
     String title = Jsoup.clean(request.getParameter("title"), Whitelist.none());
     long timestamp = System.currentTimeMillis();
-
+    String textValue = request.getParameter("text-input");
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
     KeyFactory keyFactory = datastore.newKeyFactory().setKind("Task");
     FullEntity taskEntity =
         Entity.newBuilder(keyFactory.newKey())
             .set("title", title)
             .set("timestamp", timestamp)
+            .set("feedback", textValue)
             .build();
     datastore.put(taskEntity);
 
-    response.sendRedirect("/index.html");
+    response.sendRedirect("/contact.html");
   }
 }

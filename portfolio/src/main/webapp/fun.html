@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1">
+    <title>Oluwamayokun's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <nav class="content">
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="fun.html">Fun</a></li>
+    </ul>
+  </nav>
+  <body>
+    <h3>A little play after a lot of work never hurt anyone.</h3>
+      <div class="container">
+        <div class="mySlides">
+          <div class="numbertext">1 / 5</div>
+          <img src="/images/sky.jpg" style="width: 1500px;height:300px; object-fit: contain;">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">2 / 5</div>
+          <img src="/images/book2.JPG" style="width: 1500px;height:300px; object-fit: contain;">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">3 / 5</div>
+          <img src="/images/book1.JPG" style="width: 1500px;height:300px; object-fit: contain;">
+        </div>
+          
+        <div class="mySlides">
+          <div class="numbertext">4 / 5</div>
+          <img src="/images/book3.JPG" style="width: 1500px;height:300px; object-fit: contain;">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">5 / 5</div>
+          <img src="/images/book4.JPG" style="width: 1500px;height:300px; object-fit: contain;">
+        </div>
+          
+          
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+      
+        <div class="row">
+          <div class="col">
+            <img class="demo cursor" src="/images/sky.jpg" style="width:100%; height: 60px; object-fit: contain" onclick="currentSlide(1)" alt="One of my favorite pictures; it was taken by me.">
+          </div>
+          <div class="col">
+            <img class="demo cursor" src="/images/book2.JPG" style="width:100%; height: 60px;object-fit: contain" onclick="currentSlide(2)" alt="I totally recommend this book to you.">
+          </div>
+          <div class="col">
+            <img class="demo cursor" src="/images/book1.JPG" style="width:100%; height: 60px;object-fit: contain" onclick="currentSlide(3)" alt="This was a beautiful read.">
+          </div>
+          <div class="col">
+            <img class="demo cursor" src="/images/book3.JPG" style="width:100%; height: 60px;object-fit: contain" onclick="currentSlide(4)" alt="I'm still reading this :)">
+          </div>
+          <div class="col">
+            <img class="demo cursor" src="/images/book4.JPG" style="width:100%; height: 60px;object-fit: contain" onclick="currentSlide(5)" alt="One of my current reads">
+          </div>
+        </div>
+      </div>
+
+  </body>
+  <footer>
+    <p>I would love you to leave with some inspiring words today.</p>
+    <button onclick="addWordsToLiveBy()">Words To Live By!</button>
+    <div id="word-container"></div>
+</footer>
